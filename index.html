@@ -16,7 +16,7 @@
                 
                 <label>
                     <span> </span>
-                    <input type="button" value="Calculate loan amount"/>
+                    <input type="button" onclick="calculateLoan()" value="Calculate loan amount"/>
                 </label>
             </form>
 
@@ -24,5 +24,16 @@
                 Loan amount is: <span id="answer"></span>
             </div>
         </div>
+        <script>
+
+            var salary = document.getElementById("monthlySalary").innerHTML;
+
+            calculateLoan =()=>{
+                var loan = salary*12*106
+
+                document.getElementById("answer").innerHTML=(loan);
+            }
+
+        </script>
     </body>
 </html>
